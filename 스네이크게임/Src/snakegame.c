@@ -12,23 +12,24 @@
 #define PAUSE 112
 #define ESC 27
 
+//맵 조정값
 #define MAP_WIDTH 30
 #define MAP_HEIGHT 20
 #define MAP_OFFSET_X 3
 #define MAP_OFFSET_Y 2
 #define BASE_SPEED 100
 
-CONSOLE_CURSOR_INFO CurInfo;
+CONSOLE_CURSOR_INFO CurInfo; //커서 정보 구조체
 
-int x[100], y[100];
-int food_x, food_y;
-int length;
-int speed;
-int score;
-int best_score = 0;
-int last_score = 0;
-int dir;
-int key;
+int x[100], y[100]; //뱀 꼬리까지의 위치
+int food_x, food_y; //먹이의 위치
+int length; //뱀의 길이
+int speed; //속도
+int score; //점수
+int best_score = 0; //최고점수
+int last_score = 0; //마지막점수
+int dir; //방향
+int key; //입력값
 
 void Init();
 void KeyProcess();
@@ -40,20 +41,23 @@ void Pause();
 void GameProcess();
 void GameOver();
 
-void DrawChar(int x, int y, char* s)
+void DrawChar(int x, int y, char* s) //커서위치를 옮겨 해당 위치에 출력해주는 함수
 {
-	COORD pos = { 2 * x,y };
-	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
-	printf("%s", s);
+	COORD pos = { 2 * x, y }; //좌표 구조체
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos); //표준출력의 핸들과 좌표값을 넘겨 현재 커서위치를 설정
+	printf("%s", s); //현재 커서위치에 출력
 }
 
 int main()
 {
+	//---------------커서를 보이지않게 설정 Start-----------------//
 	CurInfo.dwSize = 1;
 	CurInfo.bVisible = FALSE;
 	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &CurInfo);
+	//---------------커서를 보이지않게 설정 End-----------------//
 
-	Title();
+	Title(); //타이틀화면 출력
+
 	while (1)
 	{
 		KeyProcess();
@@ -67,39 +71,40 @@ int main()
 void Init()
 {
 	system("cls");
-	DrawMap();
+	DrawMap(); //맵을 그려줌
 
-	while (_kbhit())
+	while (_kbhit()) //버퍼 비우기
 	{
 		_getch();
 	}
 
-	dir = LEFT;
+	dir = LEFT; //왼쪽방향으로 초기화
 	speed = BASE_SPEED;
-	length = 5;
+	length = 5; //꼬리길이를 5로 초기화
 	score = 0;
 
-	for (int i = 0; i < length; i++)
+	for (int i = 0; i < length; i++) //뱀의 첫 위치를 설정해 그려준다.
 	{
 		x[i] = MAP_WIDTH / 2 + i;
 		y[i] = MAP_HEIGHT / 2;
 
-		if (i == 0)
+		if (i == 0) //머리
 		{
 			DrawChar(MAP_OFFSET_X + x[i], MAP_OFFSET_Y + y[i], "◆");
 		}
-		else
+		else //꼬리
 		{
 			DrawChar(MAP_OFFSET_X + x[i], MAP_OFFSET_Y + y[i], "○");
 		}
 	}
 
-	MakeFood();
+	MakeFood(); //먹이 생성
 }
 
 void Title()
 {
 	int cnt = 0;
+
 	DrawMap();
 
 	//공백으로 지우기
@@ -148,7 +153,7 @@ void Title()
 		Sleep(200);
 	}
 
-	while (_kbhit())
+	while (_kbhit()) //키버퍼를 비움
 	{
 		_getch();
 	}
@@ -295,7 +300,7 @@ void GameOver()
 
 	Sleep(400);
 
-	while (_kbhit())
+	while (_kbhit()) //키버퍼를 비움
 	{
 		_getch();
 	}
@@ -374,8 +379,8 @@ void Pause(void)
 		}
 	}
 
-	while (_kbhit())
-	{
+	while (_kbhit()) //키버퍼를 비움
+	{ 
 		_getch();
 	}
 }
