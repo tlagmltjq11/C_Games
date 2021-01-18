@@ -51,13 +51,16 @@ void DrawSnake(int dir)
 <br>
 
 ### About ScreenShot.:camera:
- ![snake_title](https://user-images.githubusercontent.com/43705434/104903264-1f169300-59c3-11eb-8d61-4c5e99c9dbe5.PNG)
- ![snake_gamestart](https://user-images.githubusercontent.com/43705434/104903249-1c1ba280-59c3-11eb-9e24-b8aa224a265f.PNG)
- ![snake_gamelong](https://user-images.githubusercontent.com/43705434/104903255-1de56600-59c3-11eb-940c-6f601b7c0fdd.PNG)
- ![snake_pause](https://user-images.githubusercontent.com/43705434/104903254-1d4ccf80-59c3-11eb-82b5-4998098262bc.PNG)
- ![snake_gameover](https://user-images.githubusercontent.com/43705434/104903251-1d4ccf80-59c3-11eb-933d-a6e94aa69b76.PNG)
- <br>
- <br>
+<br>Title 화면<br>
+<center><img src="https://user-images.githubusercontent.com/43705434/104903264-1f169300-59c3-11eb-8d61-4c5e99c9dbe5.PNG" width="800" height="500"></center>
+<br>Game 화면<br>
+<center><img src="https://user-images.githubusercontent.com/43705434/104903249-1c1ba280-59c3-11eb-9e24-b8aa224a265f.PNG" width="800" height="500"></center>
+<center><img src="https://user-images.githubusercontent.com/43705434/104903255-1de56600-59c3-11eb-940c-6f601b7c0fdd.PNG" width="800" height="500"></center>
+<br>Pause 화면<br>
+<center><img src="https://user-images.githubusercontent.com/43705434/104903254-1d4ccf80-59c3-11eb-82b5-4998098262bc.PNG" width="800" height="500"></center>
+<br>GameOver 화면<br>
+<center><img src="https://user-images.githubusercontent.com/43705434/104903251-1d4ccf80-59c3-11eb-933d-a6e94aa69b76.PNG" width="800" height="500"></center>
+<br>
  
 ### About Jewel Game.:gem:
 콘솔창을 이용한 미로찾기 게임으로, 보석의 위치까지 길을 찾아 이동하면 됩니다.<br>
@@ -70,8 +73,11 @@ void DrawSnake(int dir)
 <br>
 
 ### About ScreenShot.:camera:
-![jewel_title](https://user-images.githubusercontent.com/43705434/104903256-1de56600-59c3-11eb-889f-54949a3b09e5.PNG)
-![jewel_gamestart](https://user-images.githubusercontent.com/43705434/104903257-1e7dfc80-59c3-11eb-9844-3cb33e4ac25e.PNG)
-![jewel_gamecantmove](https://user-images.githubusercontent.com/43705434/104903258-1e7dfc80-59c3-11eb-9384-31f7532af543.PNG)
-![jewel_gameclear](https://user-images.githubusercontent.com/43705434/104903262-1f169300-59c3-11eb-9671-63dfd43ebcec.PNG)
+<br>Title 화면<br>
+<center><img src="https://user-images.githubusercontent.com/43705434/104903256-1de56600-59c3-11eb-889f-54949a3b09e5.PNG" width="800" height="500"></center>
+<br>Game 화면<br>
+<center><img src="https://user-images.githubusercontent.com/43705434/104903257-1e7dfc80-59c3-11eb-9844-3cb33e4ac25e.PNG" width="800" height="500"></center>
+<center><img src="https://user-images.githubusercontent.com/43705434/104903258-1e7dfc80-59c3-11eb-9384-31f7532af543.PNG" width="800" height="500"></center>
+<br>Clear 화면<br>
+<center><img src="https://user-images.githubusercontent.com/43705434/104903262-1f169300-59c3-11eb-9671-63dfd43ebcec.PNG" width="800" height="500"></center>
 <br>
