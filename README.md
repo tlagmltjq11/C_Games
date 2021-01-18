@@ -10,6 +10,8 @@
 2. 현재시간을 seed로 넣어 난수를 생성해, 랜덤한 위치에 먹이가 생성되도록 했습니다.
 3. 뱀의 이동 로직 Code
 ```c#
+//뱀의 몸체좌표는 int x[], y[]에 머리부터 순차적으로 저장되어있음.
+
 void DrawSnake(int dir)
 {
 	DrawChar(MAP_OFFSET_X + x[length - 1], MAP_OFFSET_Y + y[length - 1], "  "); //뱀의 마지막 꼬리부분을 지워준다.
@@ -60,6 +62,8 @@ void DrawSnake(int dir)
 <center><img src="https://user-images.githubusercontent.com/43705434/104903254-1d4ccf80-59c3-11eb-82b5-4998098262bc.PNG" width="800" height="500"></center>
 <br>GameOver 화면<br>
 <center><img src="https://user-images.githubusercontent.com/43705434/104903251-1d4ccf80-59c3-11eb-933d-a6e94aa69b76.PNG" width="800" height="500"></center>
+<br>
+<br>
 <br>
  
 ### About Jewel Game.:gem:
